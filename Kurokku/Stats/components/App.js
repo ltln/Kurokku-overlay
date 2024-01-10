@@ -52,7 +52,7 @@ const app = {
   computed: {
     overlaySettings() {
       return {
-        backgroundColor: 'rgba(35, 61, 45, 0.7)', // --key-dark -> RGBA
+        backgroundColor: hexToRgbA('#233d2d'), // --key-dark -> RGBA
         chartHeight: 200,
         hideChartLegend: true,
       };
@@ -72,5 +72,18 @@ const app = {
     },
   },
 };
+
+function hexToRgbA(hex){
+  var c;
+  if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+      c= hex.substring(1).split('');
+      if(c.length== 3){
+          c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+      }
+      c= '0x'+c.join('');
+      return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+', 0.7)';
+  }
+  throw new Error('Bad Hex');
+}
 
 export default app;

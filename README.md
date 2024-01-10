@@ -14,7 +14,7 @@ Demo: [Click here](https://youtu.be/3I5x9xlzTc4)
 4. Adjust your OBS overlay and you are done!
 
 ### Colour config
-Since there is no global configuration for all overlays, you will need to edit colour in each **css** files. You need to pick 3 variants type of same colour as 3 following variables: `--key` (normal), `--key-active` (lighten),`--key-dark` (darken).
+There is a global css file for colour configuration. You need to pick 3 variants type of same colour as 3 following variables: `--key` (normal), `--key-active` (lighten),`--key-dark` (darken).
 
 **Examples:**
 1. Venti's Green
@@ -30,7 +30,7 @@ Since there is no global configuration for all overlays, you will need to edit c
 * ![#d790fe](https://placehold.co/15x15/d790fe/d790fe.png) `#d790fe`
 * ![#3a2756](https://placehold.co/15x15/3a2756/3a2756.png) `#3a2756`
 
-To config these colours, find and edit `main.css` file in `/deps/` of each overlay directories. You will find the following code at the begin of the file.
+To config these colours, find and edit `global.css`. You will find the following code in the file.
 ```css
 :root {
   --key: #6ac48e;
@@ -38,13 +38,13 @@ To config these colours, find and edit `main.css` file in `/deps/` of each overl
   --key-dark: #233d2d
 }
 ```
-Change these hex colour codes to your desired one.
+Change these hex colour codes to your desired one. Those can be in RGB format.
 
 For **Hit Count** overlay, you don't need to change these colours as they are in their correct presenting colours.
 
 For **Stats** overlay, you need to do extra step. Find and edit `App.js` file in `/components` of **Hit** directory, navigate to line 55 and line 62:
-- **Line 55**: Convert `--key-dark` hex code to RGBA and then paste it with opacity 0.7. Ex: `#233d2d` &rarr; `rgba(35, 61, 45)`, paste `rgba(35, 61, 45, 0.7)`, the fourth number of RBGA is the opacity.
-- **Line 62**: You only need to paste `--key` hex code to it.
+- **Line 55**: Paste `--key-dark` hex code in `global.css` to it.
+- **Line 62**: Paste `--key` hex code in `global.css` to it.
 
 ![stats](/images/stats.png)
 

@@ -1,8 +1,4 @@
-:root {
-  --key: #6ac48e;
-  --key-active: #9cf7c0;
-  --key-dark: #233d2d;
-}
+@import "../../global.css";
 
 body {
   margin: 0;
