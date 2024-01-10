@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+* {
+  font-family: 'Comfortaa';
+}
+.large {
+  font-size: 35px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.wrapper {
+  margin: 24px auto;
+
+  height: 40px;
+  width: 150px;
+
+  transition-duration: 500ms;
+}
+
+.ur {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+.ur_text {
+  color: #ccc;
+  opacity: 0.7;
+  text-align: center;
+  font-size: 18px;
+}
+
+.ur_text .v {
+  color: white;
+  font-weight: bold;
+  opacity: 0.9;
+}

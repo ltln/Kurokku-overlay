@@ -1,0 +1,72 @@
+:root {
+  /* Key + Tile colour */
+  --key: #6ac48e;
+  --key-active: #9cf7c0;
+  --key-dark: #233d2d
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  left: 24px;
+  height: 46px;
+  width: 400px;
+
+  transition-duration: 500ms;
+}
+* {
+  color: white;
+  font-family: "Arial";
+}
+.large {
+  font-size: 35px;
+}
+.hide {
+  opacity: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.combo_wrapper {
+  position: relative;
+  width: 200px;
+}
+
+.combo {
+  position: absolute;
+  right: 0;
+	transform: skew(-15deg);
+	background: var(--key);
+
+  padding: 8px 12px;
+
+  /* width: 26px; */
+  height: 30px;
+  transition-duration: 500ms;
+
+  filter: drop-shadow(3px 3px 0px var(--key-dark));
+  border-radius: 8px;
+}
+
+.combo_handler {
+  width: 300px; 
+  position: absolute;
+
+  transition-duration: 500ms;
+
+  top: 8px;
+  left: 162px;
+}
+
+.combo_handler .text {
+  display: inline-block;
+  
+  font-size: 24px;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8));
+}

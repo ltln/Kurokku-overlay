@@ -1,0 +1,68 @@
+<!-- 
+Key Overlay
+Dir: /Files/Web/overlays/KeyOverlay
+URL: http://localhost:20727/overlays/KeyOverlay/ 
+Date: 1/7/23 - @ltln
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>KeyOverlay</title>
+    <link href="./deps/main.css" rel="stylesheet" />
+    <link href="./deps/odometr.css" rel="stylesheet" />
+    <link href="./deps/animate.css" rel="stylesheet" />
+
+    <!-- This is a development version of Vue.js -->
+    <script src="https://unpkg.com/vue@3.2.14/dist/vue.global.js"></script>
+    <script src="/lib/reconnecting-websocket.js"></script>
+    <script src="/lib/consts.js"></script>
+    <script src="/lib/utils.js"></script>
+    <script src="./deps/odometr.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <div class="wrapper" style="transition-duration: 300ms;" :class="{'hide':!isPlayingOrWatching}">
+        <div
+          style="
+            display: block;
+            position: relative;
+            width: 300px;
+            height: 130px;
+            background-color: rgb(0,0,0);
+            overflow: hidden;
+            margin-top: 4px;
+            padding-right: 12px;
+            border-radius: 8px;
+          "
+        >
+          <div class="black_overlay"></div>
+            <div class="key_wrapper animate__animated animate__fadeInDown" id="k1_overlay">
+              <div class="key_tile" id="tile1"></div>
+              <div class="keys-text" id="kt1">
+                <span style="color: white;" class="odometer" id="kc1">{{isPlayingOrWatching ? k1 : 0}}</span>
+              </div>
+              <div id="K1Overlay" class="keys"></div>
+              <div class="keys-text" id="k1">
+                <span style="color: gray;">K1</span>
+              </div>
+            </div>
+            <div class="key_wrapper animate__animated animate__fadeInDown" id="k2_overlay" style="top: 73px;">
+              <div class="key_tile" id="tile2"></div>
+              <div class="keys-text" id="kt2">
+                <span style="color: white;" class="odometer" id="kc2">{{isPlayingOrWatching ? k1 : 0}}</span>
+              </div>
+              <div id="K2Overlay" class="keys"></div>
+              <div class="keys-text" id="k2">
+                <span style="color: gray;">K2</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

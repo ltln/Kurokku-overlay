@@ -1,0 +1,97 @@
+:root {
+  /* Key + Tile colour */
+  --key: #6ac48e;
+  --key-active: #9cf7c0;
+}
+
+body {
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+* {
+  color: white;
+  font-family: "Arial";
+}
+.large {
+  font-size: 35px;
+}
+.hide {
+  opacity: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.black_overlay {
+  position: absolute;
+  width: 250px;
+  height: 130px;
+  z-index: 100;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.key_wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+
+  height: 57px;
+  width: 300px;
+
+  margin-bottom: 16px;
+
+  --animate-duration: 300ms;
+  display: none;
+}
+
+.keys {
+  border-width: 0px;
+  border-radius: 4px;
+  height: 46px;
+  width: 8px;
+  background-color: var(--key);
+  border-style: solid;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keys.active {
+  background-color: var(--key-active);
+}
+
+.key_tile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  height: 57px;
+  width: 235px;
+}
+
+.tile {
+  position: absolute; 
+  height: 40px; 
+  top: 9px;
+  width: 1px;
+  background-color: var(--key);
+  opacity: 0.7;
+}
+
+.keys-text {
+  font-size: 24px;
+  z-index: 101 !important;
+}

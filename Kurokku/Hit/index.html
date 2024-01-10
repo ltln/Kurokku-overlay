@@ -1,0 +1,55 @@
+<!-- 
+Hit Count Overlay
+Dir: /Files/Web/overlays/Kurokku/Hit
+URL: http://localhost:20727/overlays/Kurokku/Hit/
+Date: 1/8/23 - @ltln
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hit Count</title>
+    <link href="./deps/main.css" rel="stylesheet" />
+    <link href="./deps/odometr.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.prod.js"></script>
+    <script src="/lib/reconnecting-websocket.js"></script>
+    <script src="/lib/consts.js"></script>
+    <script src="/lib/utils.js"></script>
+    <script src="./deps/odometr.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <div class="wrapper" id="hit">
+        <div class="block">
+          <div class="line" id="line100"></div>
+          <p>
+            <span>{{getToken('c100')}}</span>x
+          </p>
+        </div>
+        <div class="block">
+          <div class="line" id="line50"></div>
+          <p>
+            <span>{{getToken('c50')}}</span>x
+          </p>
+        </div>
+        <div class="block">
+          <div class="line" id="line0"></div>
+          <p>
+            <span>{{getToken('miss')}}</span>x
+          </p>
+        </div>
+        <div class="block">
+          <div class="line" id="line_sb"></div>
+          <p>
+            <span>{{getToken('sliderBreaks')}}</span>x
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
