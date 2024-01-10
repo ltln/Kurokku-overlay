@@ -3,6 +3,7 @@ Cpol styled osu! replay overlay for Kurokku
 
 Overlay for: [StreamCompanion](https://github.com/Piotrekol/StreamCompanion)
 
+Demo: [Click here](https://youtu.be/3I5x9xlzTc4)
 ### Instruction
 1. Download and extract the **Kurokku** folder to `%sc_root%/Files/Web/overlays`
 2. Setup OBS:
