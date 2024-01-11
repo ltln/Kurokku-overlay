@@ -63,6 +63,7 @@ Kurokku-overlay
     |   PP
     |   Stats
     |   UR
+    |   global.css
 ```
 All overlays were made using <img src="https://github.com/get-icon/geticon/raw/master/icons/html-5.svg" alt="HTML5" width="21px" height="21px"> **HTML**, <img src="https://github.com/get-icon/geticon/raw/master/icons/css-3.svg" alt="CSS3" width="21px" height="21px"> **CSS3**, <img src="https://github.com/get-icon/geticon/raw/master/icons/javascript.svg" alt="JavaScript" width="21px" height="21px"> **Javascript**, <img src="https://github.com/get-icon/geticon/raw/master/icons/vue.svg" alt="Vue.js" width="21px" height="21px"> **Vue.js** based on Stream Companion default overlays.
 External Libraries used: [Animate.css](https://github.com/animate-css/animate.css), [odometer](https://github.com/HubSpot/odometer), [Font Awesome](https://fontawesome.com/)
